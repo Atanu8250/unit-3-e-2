@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+</head>
+
+<body>
+  <div id="order-form">
+    <!--Add your form html element here-->
+    <!--In form, give #user_name,#user_number and #user_address as HTML id's to relevant input elements -->
+    <form>
+      <input type="text" id="user_name" placeholder="Enter Your name" required>
+      <input type="text" id="user_number" placeholder="Mobile number" required>
+      <input type="text" id="user_address" placeholder="Enter address here" required>
+      <input type="submit" value="Order" id="submit">
+    </form>
+  </div>
+</body>
+<script>
+
+  let form = document.querySelector("form");
+  form.addEventListener("submit", order)
+
+  function order(e){
+    e.preventDefault();
+    alert("Your order is confirmed")
+
+    setTimeout(() => {
+      alert("Your order is being Packed");
+    }, 3000);
+
+    setTimeout(() => {
+      alert("Your order is in transit");
+    }, 8000);
+
+    setTimeout(() => {
+      alert("Your order is out for delivery");
+    }, 10000);
+
+    setTimeout(() => {
+      alert("Order delivered");
+    }, 12000);
+  }
+</script>
+</html>
